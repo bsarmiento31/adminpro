@@ -9,20 +9,26 @@ import { APP_ROUTES } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register.component';
+import { SettingsService } from './services/settings/settings.service';
 //Temporal
 import { FormsModule } from '@angular/forms';
+
+//Servicios
+import { ServiceModule } from './services/service.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent,
-  ],
+    RegisterComponent
+   ],
   imports: [
     BrowserModule,
     APP_ROUTES,
     PagesModule,
-    FormsModule
+    FormsModule,
+    ServiceModule
   ],
   providers: [],
   bootstrap: [AppComponent]
